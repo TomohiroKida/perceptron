@@ -1,0 +1,1007 @@
+
+==================== FINAL INTERFACE ====================
+2018-05-08 07:56:51.892769 UTC
+
+interface main:Main 8022
+  interface hash: 10e05b410420359fb7a107ed6370dcd0
+  ABI hash: 7f9e1510c9ed18865cab6fe7f608886d
+  export-list hash: 4e4d5e7aea9a9f2126c0fa14f6099d88
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8cf97270168d67fbb0fb8b5afc203bf6
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.gradientDescent
+  Main.linearFunc
+  Main.linearFunc'
+  Main.lossFunc
+  Main.main
+  Main.plotDataPng
+  Main.simPerceptron
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.10.1.0 binary-0.8.5.1
+                      bytestring-0.10.8.2 containers-0.5.10.2 data-accessor-0.2.2.7
+                      data-accessor-transformers-0.2.1.7 deepseq-1.4.3.0
+                      directory-1.3.0.2 exceptions-0.8.3 filepath-1.4.1.2
+                      ghc-boot-th-8.2.2 ghc-prim-0.5.1.1 gnuplot-0.5.5.2 hmatrix-0.18.2.0
+                      integer-gmp-1.0.1.0 mtl-2.2.2 primitive-0.6.3.0 process-1.6.1.0
+                      random-1.1 split-0.2.3.3 stm-2.4.5.0 template-haskell-2.12.0.0
+                      temporary-1.2.1.1 time-1.8.0.2 transformers-0.5.2.0 unix-2.7.2.2
+                      utility-ht-0.0.14 vector-0.12.0.1
+orphans: stm-2.4.5.0:Control.Monad.STM
+         hmatrix-0.18.2.0:Internal.Util hmatrix-0.18.2.0:Numeric.Matrix
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         hmatrix-0.18.2.0:Internal.CG hmatrix-0.18.2.0:Numeric.Vector
+         hmatrix-0.18.2.0:Internal.Element hmatrix-0.18.2.0:Internal.Vector
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         hmatrix-0.18.2.0:Internal.Devel hmatrix-0.18.2.0:Internal.Matrix
+                         hmatrix-0.18.2.0:Internal.Modular hmatrix-0.18.2.0:Internal.Numeric
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         vector-0.12.0.1:Data.Vector.Storable
+import  -/  base-4.10.1.0:Data.Tuple 8fa1305aa5032ea35e2a54fa5f1e78f9
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Real 3c62834bc25e762eabc44149c4cc142d
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  base-4.10.1.0:System.IO 6e5bb580370d8d71dc5888f723cea4b4
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+import  -/  gnuplot-0.5.5.2:Graphics.Gnuplot.Simple c8ce3b33128e8191366257f5c329acfd
+import  -/  hmatrix-0.18.2.0:Internal.Element 87b58b682295ea4060807b50dd2c6ed8
+import  -/  hmatrix-0.18.2.0:Internal.Matrix e16a935f4b99038a4fcc598eebbf70a6
+import  -/  hmatrix-0.18.2.0:Internal.Numeric 05436202e8cadb25675c322d1919c33a
+import  -/  hmatrix-0.18.2.0:Internal.Util 66439b9cd2cf2d6d2826685698a40f28
+import  -/  hmatrix-0.18.2.0:Internal.Vector fc2158f8debbdac8acec01b97b9fc19a
+import  -/  hmatrix-0.18.2.0:Numeric.LinearAlgebra bc6f0698ad07d94aaa74e6f4f9b114b5
+import  -/  random-1.1:System.Random 67ab9c10e5ef876df2ffe0948e0b894c
+9d72b2fddb818bcd8919052935e0f1f3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+3108ceeaf5a318be844de422b45de9d8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+33bd129667974f0a0ba4a893af79107d
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+fb94bea4c003acc6121c5fbb53b37b06
+  $wgradientDescent ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> (# GHC.Prim.Int#, GHC.Prim.Int#, GHC.Prim.Int#, GHC.Prim.Int#,
+          GHC.Prim.Int#, GHC.Prim.Addr#, GHC.ForeignPtr.ForeignPtrContents #)
+  {- Arity: 8, Strictness: <S,U><S,U><S,U><S,U><S,U><S,U><S,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (ww4 :: GHC.Prim.Int#)
+                   (ww5 :: GHC.Prim.Int#)
+                   (ww6 :: GHC.Prim.Addr#)
+                   (ww7 :: GHC.ForeignPtr.ForeignPtrContents) ->
+                 case GHC.List.$w!!
+                        @ GHC.Types.Int
+                        Main.ts
+                        ww of wild { GHC.Types.I# i ->
+                 let {
+                   xi :: Internal.Matrix.Matrix Internal.Vector.R
+                   = Main.gradientDescent26
+                       (GHC.Types.:
+                          @ [GHC.Types.Double]
+                          (GHC.List.$w!! @ [GHC.Types.Double] Main.xs ww)
+                          (GHC.Types.[] @ [GHC.Types.Double]))
+                 } in
+                 case Main.$wlinearFunc
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        ww5
+                        ww6
+                        ww7
+                        xi of wild3 { GHC.Types.D# y ->
+                 let {
+                   x :: GHC.Prim.Double# = GHC.Prim.int2Double# i
+                 } in
+                 let {
+                   y1 :: GHC.Prim.Double# = GHC.Prim.negateDouble# (GHC.Prim.*## x y)
+                 } in
+                 let {
+                   $j :: GHC.Prim.Double#
+                         -> (# GHC.Prim.Int#, GHC.Prim.Int#, GHC.Prim.Int#, GHC.Prim.Int#,
+                               GHC.Prim.Int#, GHC.Prim.Addr#, GHC.ForeignPtr.ForeignPtrContents #)
+                     <join 1> {- Arity: 1, Strictness: <S,U> -}
+                   = \ (x1 :: GHC.Prim.Double#)[OneShot] ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.>## x1 0.0##) of wild1 {
+                       GHC.Types.False -> (# ww1, ww2, ww3, ww4, ww5, ww6, ww7 #)
+                       GHC.Types.True
+                       -> case Internal.Element.$w><
+                                 @ GHC.Types.Double
+                                 Foreign.Storable.$fStorableDouble
+                                 1#
+                                 1#
+                                 (GHC.Types.:
+                                    @ GHC.Types.Double
+                                    (case GHC.Float.$w$ctoRational
+                                            (GHC.Prim.negateDouble# x) of ww8 { (#,#) ww9 ww10 ->
+                                     GHC.Float.rationalToDouble ww9 ww10 })
+                                    (GHC.Types.[]
+                                       @ GHC.Types.Double)) of ww8 { (#,,,,,,#) ww9 ww10 ww11 ww12 ww13 ww14 ww15 ->
+                          case Internal.Element.liftMatrix2Auto
+                                 @ GHC.Types.Double
+                                 @ GHC.Types.Double
+                                 @ GHC.Types.Double
+                                 Internal.Matrix.$fElementDouble
+                                 Internal.Matrix.$fElementDouble
+                                 Internal.Matrix.$fElementDouble
+                                 Numeric.Vector.$fNumVector1_$c-
+                                 (Internal.Matrix.Matrix
+                                    @ Internal.Vector.R
+                                    ww1
+                                    ww2
+                                    ww3
+                                    ww4
+                                    ww5
+                                    ww6
+                                    ww7)
+                                 (Internal.Element.liftMatrix2Auto
+                                    @ GHC.Types.Double
+                                    @ GHC.Types.Double
+                                    @ GHC.Types.Double
+                                    Internal.Matrix.$fElementDouble
+                                    Internal.Matrix.$fElementDouble
+                                    Internal.Matrix.$fElementDouble
+                                    Numeric.Vector.$fNumVector1_$c*
+                                    (Internal.Element.liftMatrix2Auto
+                                       @ GHC.Types.Double
+                                       @ GHC.Types.Double
+                                       @ GHC.Types.Double
+                                       Internal.Matrix.$fElementDouble
+                                       Internal.Matrix.$fElementDouble
+                                       Internal.Matrix.$fElementDouble
+                                       Numeric.Vector.$fNumVector1_$c*
+                                       Main.gradientDescent1
+                                       (Internal.Matrix.Matrix
+                                          @ GHC.Types.Double
+                                          ww9
+                                          ww10
+                                          ww11
+                                          ww12
+                                          ww13
+                                          ww14
+                                          ww15))
+                                    xi) of ww16 { Internal.Matrix.Matrix ww17 ww18 ww19 ww20 ww21 ww22 ww23 ->
+                          (# ww17, ww18, ww19, ww20, ww21, ww22, ww23 #) } } }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<=## 0.0## y1) of wild2 {
+                   GHC.Types.False -> $j 0.0## GHC.Types.True -> $j y1 } } }) -}
+24c9fd1f49c64da1fe7ae702db1c6f47
+  $wlinearFunc ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> Internal.Matrix.Matrix Internal.Vector.R
+    -> GHC.Types.Double
+  {- Arity: 8,
+     Strictness: <S,1*U><L,U><L,U><L,U><L,U><L,U><L,U><L,1*U(1*U,U,U,U,U,U,U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (ww4 :: GHC.Prim.Int#)
+                   (ww5 :: GHC.Prim.Addr#)
+                   (ww6 :: GHC.ForeignPtr.ForeignPtrContents)
+                   (w :: Internal.Matrix.Matrix Internal.Vector.R) ->
+                 case ww of wild {
+                   DEFAULT -> Main.gradientDescent4
+                   1#
+                   -> case w of wild1 { Internal.Matrix.Matrix dt dt1 dt2 dt3 dt4 dt5 dt6 ->
+                      case dt of wild2 {
+                        DEFAULT -> Main.gradientDescent4
+                        1#
+                        -> case Internal.Numeric.$fProductDouble_$semptyMul
+                                  @ GHC.Types.Double
+                                  @ GHC.Types.Double
+                                  Internal.LAPACK.multiplyR
+                                  (Internal.Matrix.Matrix
+                                     @ Internal.Vector.R
+                                     1#
+                                     ww1
+                                     ww2
+                                     ww3
+                                     ww4
+                                     ww5
+                                     ww6)
+                                  (Internal.Matrix.Matrix
+                                     @ Internal.Vector.R
+                                     dt1
+                                     1#
+                                     dt3
+                                     dt2
+                                     dt4
+                                     dt5
+                                     dt6) of ww7 { Internal.Matrix.Matrix ww8 ww9 ww10 ww11 ww12 ww13 ww14 ->
+                           case Internal.Matrix.$wtoLists
+                                  @ Internal.Vector.R
+                                  Internal.Matrix.$fElementDouble
+                                  ww8
+                                  ww9
+                                  ww10
+                                  ww11
+                                  ww12
+                                  ww13
+                                  ww14 of wild3 {
+                             [] -> case GHC.List.badHead ret_ty GHC.Types.Double of {}
+                             : x ds1
+                             -> case x of wild4 {
+                                  [] -> GHC.List.badHead @ Internal.Vector.R
+                                  : x1 ds2 -> x1 } } } } } }) -}
+2530d54065e945be597bedf060b482fd
+  $wlinearFunc' ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> GHC.Prim.Double#
+    -> GHC.Prim.Double#
+  {- Arity: 8,
+     Strictness: <S,U><S,U><S,U><S,1*U><S,U><S,U><L,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (ww4 :: GHC.Prim.Int#)
+                   (ww5 :: GHC.Prim.Addr#)
+                   (ww6 :: GHC.ForeignPtr.ForeignPtrContents)
+                   (ww7 :: GHC.Prim.Double#) ->
+                 let {
+                   w :: [Internal.Vector.R]
+                   = GHC.List.$w!!
+                       @ [Internal.Vector.R]
+                       (Internal.Matrix.$wtoLists
+                          @ Internal.Vector.R
+                          Internal.Matrix.$fElementDouble
+                          ww
+                          ww1
+                          ww2
+                          ww3
+                          ww4
+                          ww5
+                          ww6)
+                       0#
+                 } in
+                 case GHC.List.$w!!
+                        @ Internal.Vector.R
+                        w
+                        1# of wild3 { GHC.Types.D# y ->
+                 case GHC.List.$w!!
+                        @ Internal.Vector.R
+                        w
+                        2# of wild1 { GHC.Types.D# y1 ->
+                 case GHC.List.$w!!
+                        @ Internal.Vector.R
+                        w
+                        0# of wild2 { GHC.Types.D# x ->
+                 case GHC.Prim./##
+                        (GHC.Prim.*## (GHC.Prim.negateDouble# ww7) y)
+                        y1 of wild4 { DEFAULT ->
+                 case GHC.Prim./## x y1 of wild5 { DEFAULT ->
+                 GHC.Prim.-## wild4 wild5 } } } } }) -}
+fa6324babb58b75262031f9084844bc1
+  gradientDescent ::
+    GHC.Types.Int
+    -> Internal.Matrix.Matrix Internal.Vector.R
+    -> Internal.Matrix.Matrix Internal.Vector.R
+  {- Arity: 2,
+     Strictness: <S(S),1*U(U)><S(SSSSSSL),1*U(U,U,U,U,U,U,U)>m,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Internal.Matrix.Matrix Internal.Vector.R) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Internal.Matrix.Matrix ww3 ww4 ww5 ww6 ww7 ww8 ww9 ->
+                 case Main.$wgradientDescent
+                        ww1
+                        ww3
+                        ww4
+                        ww5
+                        ww6
+                        ww7
+                        ww8
+                        ww9 of ww10 { (#,,,,,,#) ww11 ww12 ww13 ww14 ww15 ww16 ww17 ->
+                 Internal.Matrix.Matrix
+                   @ Internal.Vector.R
+                   ww11
+                   ww12
+                   ww13
+                   ww14
+                   ww15
+                   ww16
+                   ww17 } } }) -}
+ca6fc6da6e618a869b60e1cbf6020936
+  gradientDescent1 :: Internal.Matrix.Matrix GHC.Types.Double
+  {- Unfolding: (case Internal.Element.$w><
+                        @ GHC.Types.Double
+                        Foreign.Storable.$fStorableDouble
+                        1#
+                        1#
+                        Main.gradientDescent2 of ww { (#,,,,,,#) ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 Internal.Matrix.Matrix
+                   @ GHC.Types.Double
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7 }) -}
+1152704610ad15f65e84b84bdbc7bc95
+  gradientDescent10 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent11
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+5ee70cfc122da7fe7ddd04a10cc7ded5
+  gradientDescent11 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 3.0##) -}
+8e284fa74023cc4e0d0484866cf28acf
+  gradientDescent12 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 7.0##) -}
+1b138d2cf11e50182035ddab18ece25b
+  gradientDescent13 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 1.0##) -}
+c6fcc1c150a5c06e5d51a945f56b3b7f
+  gradientDescent14 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent13
+                   Main.gradientDescent15) -}
+05b02e1261b50bff522d39536a64b601
+  gradientDescent15 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent11
+                   Main.gradientDescent16) -}
+1d8d77cf54553ba5593631e397f6cc34
+  gradientDescent16 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent17
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+0d729afc187216cc5bc91293dca58848
+  gradientDescent17 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 2.0##) -}
+b5336794b4ab9c190cb2b42ef2336c38
+  gradientDescent18 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent13
+                   Main.gradientDescent19) -}
+4058a9f93e0eaba9f464fcfead3006e8
+  gradientDescent19 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent13
+                   Main.gradientDescent20) -}
+3cdbe26841bfdad0420b63644ea4509b
+  gradientDescent2 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent3
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+ddadfb1125ac1d447cc176c244f740a7
+  gradientDescent20 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent21
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+5f0b87b01e5d903ff3d34f3dc17873e2
+  gradientDescent21 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 4.0##) -}
+96ca2d9956c2de9d12a62a3cfda46a9a
+  gradientDescent22 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent13
+                   Main.gradientDescent23) -}
+12c7b4ca3afeaffdc52aed5f4d17184b
+  gradientDescent23 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent21
+                   Main.gradientDescent24) -}
+cc92d6a624211facc4adbf2e1940fd52
+  gradientDescent24 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent25
+                   (GHC.Types.[] @ GHC.Types.Double)) -}
+999b110ae1080c3b06a29f93929f4595
+  gradientDescent25 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 6.0##) -}
+97cab44b53dcdaea71723f72fa2c18f0
+  gradientDescent26 ::
+    [[GHC.Types.Double]] -> Internal.Matrix.Matrix GHC.Types.Double
+  {- Unfolding: (Internal.Element.fromLists
+                   @ GHC.Types.Double
+                   Internal.Matrix.$fElementDouble) -}
+c29c9884fd7a8cffb30c167e582d75a6
+  gradientDescent27 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Main.gradientDescent31
+                   Main.gradientDescent28) -}
+05fc25a80f9dc9c489313e6f28c957c9
+  gradientDescent28 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Main.gradientDescent30
+                   Main.gradientDescent29) -}
+31e0ad9c547319077ada725b82c0924c
+  gradientDescent29 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Main.gradientDescent30
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+bbb09e19da956266b39c05711b63b8b3
+  gradientDescent3 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 0.1##) -}
+71643bd32755c9cba8de10f2df74fde2
+  gradientDescent30 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+5ae14b721f177f4296e83d2bd21c0715
+  gradientDescent31 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# -1#) -}
+12eec23ddd12331c5db609da07fa2d9e
+  gradientDescent4 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# -1.0##) -}
+cbeda64fef6a4f48f0a4a81d248fa9c3
+  gradientDescent5 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   Main.gradientDescent18
+                   Main.gradientDescent6) -}
+ffba9e6f369c55afdb12c5412eace872
+  gradientDescent6 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   Main.gradientDescent14
+                   Main.gradientDescent7) -}
+90152327ee42728ac2de0c0f83c051a7
+  gradientDescent7 :: [[GHC.Types.Double]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   Main.gradientDescent8
+                   (GHC.Types.[] @ [GHC.Types.Double])) -}
+42aebaa54862f7ec1e6f5aa33bbf643c
+  gradientDescent8 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent13
+                   Main.gradientDescent9) -}
+562247e57eed49407524fb600deda526
+  gradientDescent9 :: [GHC.Types.Double]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Double
+                   Main.gradientDescent12
+                   Main.gradientDescent10) -}
+24be4bb10afa86d8084a1fb937ee2916
+  linearFunc ::
+    Internal.Matrix.Matrix Internal.Vector.R
+    -> Internal.Matrix.Matrix Internal.Vector.R -> GHC.Types.Double
+  {- Arity: 2,
+     Strictness: <S(SSSSSSL),1*U(1*U,U,U,U,U,U,U)><L,1*U(1*U,U,U,U,U,U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Internal.Matrix.Matrix Internal.Vector.R)
+                   (w1 :: Internal.Matrix.Matrix Internal.Vector.R) ->
+                 case w of ww { Internal.Matrix.Matrix ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 Main.$wlinearFunc ww1 ww2 ww3 ww4 ww5 ww6 ww7 w1 }) -}
+e5a431f52503beee4f9f380aa10a4cab
+  linearFunc' ::
+    Internal.Matrix.Matrix Internal.Vector.R
+    -> GHC.Types.Double -> GHC.Types.Double
+  {- Arity: 2,
+     Strictness: <S(SSSSSSL),1*U(U,U,U,1*U,U,U,U)><S(S),1*U(U)>m,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Internal.Matrix.Matrix Internal.Vector.R)
+                   (w1 :: GHC.Types.Double) ->
+                 case w of ww { Internal.Matrix.Matrix ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 case w1 of ww8 { GHC.Types.D# ww9 ->
+                 case Main.$wlinearFunc'
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        ww5
+                        ww6
+                        ww7
+                        ww9 of ww10 { DEFAULT ->
+                 GHC.Types.D# ww10 } } }) -}
+cb683a9ee90e5951b17a77ec2d6701ab
+  lossFunc ::
+    GHC.Types.Double -> GHC.Types.Double -> GHC.Types.Double
+  {- Arity: 2, HasNoCafRefs, Strictness: <S(S),1*U(U)><S(S),1*U(U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (t :: GHC.Types.Double) (f :: GHC.Types.Double) ->
+                 case t of wild2 { GHC.Types.D# x ->
+                 case f of wild3 { GHC.Types.D# y ->
+                 let {
+                   y1 :: GHC.Prim.Double# = GHC.Prim.negateDouble# (GHC.Prim.*## x y)
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<=## 0.0## y1) of wild1 {
+                   GHC.Types.False -> Main.lossFunc1
+                   GHC.Types.True -> GHC.Types.D# y1 } } }) -}
+6d7197ae8bccd85ead41d5ad6ec86b8a
+  lossFunc1 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 0.0##) -}
+6274ca2dd9d48238a708621edf1358ed
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+092630a086cb66102b3889c76d0ad08a
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case System.Random.theStdGen
+                        `cast`
+                      (Nth:2
+                           (Trans
+                                (<GHC.IORef.IORef System.Random.StdGen>_R
+                                 ->_R GHC.Types.N:IO[0] <System.Random.StdGen>_R)
+                                (GHC.IORef.N:IORef[0] <System.Random.StdGen>_N
+                                 ->_R <GHC.Prim.State# GHC.Prim.RealWorld
+                                       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                             System.Random.StdGen #)>_R))) of wild { GHC.STRef.STRef var# ->
+                 case GHC.Prim.readMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ System.Random.StdGen
+                        var#
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 Main.main6 ipv1 Main.main3 Main.main2 ipv } }) -}
+ee677095cdef5297d5105ffb0705c196
+  main2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 100#) -}
+d7740f6abd230a1e2834967d358a1a54
+  main3 :: Internal.Matrix.Matrix Internal.Vector.R
+  {- Unfolding: (case Internal.Element.$w><
+                        @ Internal.Vector.R
+                        Foreign.Storable.$fStorableDouble
+                        1#
+                        3#
+                        Main.main4 of ww4 { (#,,,,,,#) ww5 ww6 ww7 ww8 ww9 ww10 ww11 ->
+                 Internal.Matrix.Matrix
+                   @ Internal.Vector.R
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww9
+                   ww10
+                   ww11 }) -}
+ffd8a3b5aeb4511ca18436c69038c385
+  main4 :: [Internal.Vector.R]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Internal.Vector.R
+                   Main.gradientDescent4
+                   Main.main5) -}
+4fe52c27ad803dc553ea961788e0ee72
+  main5 :: [Internal.Vector.R]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Internal.Vector.R
+                   Main.gradientDescent17
+                   Main.gradientDescent10) -}
+ebd91f8edf379296929effc1b3c769b3
+  main6 ::
+    System.Random.StdGen
+    -> Internal.Matrix.Matrix Internal.Vector.R
+    -> GHC.Types.Int
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4,
+     Strictness: <L,U><L,1*U(U,U,U,U,U,U,U)><L,U(U)><S,U> -}
+76cf8a85a14494b19ad5b12a5cdf48f1
+  main7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+fcedb9dde4f0efa59627840c3389659b
+  plotDataPng ::
+    Internal.Matrix.Matrix Internal.Vector.R -> GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U(U,U,U,U,U,U,U)>,
+     Unfolding: (\ (ws :: Internal.Matrix.Matrix Internal.Vector.R) ->
+                 Main.plotDataPng39
+                   Main.plotDataPng17
+                   (GHC.Types.:
+                      @ (Graphics.Gnuplot.Simple.PlotStyle,
+                         [(GHC.Types.Double, GHC.Types.Double)])
+                      Main.plotDataPng11
+                      (GHC.Types.:
+                         @ (Graphics.Gnuplot.Simple.PlotStyle,
+                            [(GHC.Types.Double, GHC.Types.Double)])
+                         Main.plotDataPng4
+                         (GHC.Types.:
+                            @ (Graphics.Gnuplot.Simple.PlotStyle,
+                               [(GHC.Types.Double, GHC.Types.Double)])
+                            (Main.plotDataPng3,
+                             GHC.Base.map
+                               @ GHC.Types.Double
+                               @ (GHC.Types.Double, GHC.Types.Double)
+                               (\ (x :: GHC.Types.Double) -> (x, Main.linearFunc' ws x))
+                               Main.plotDataPng1)
+                            (GHC.Types.[]
+                               @ (Graphics.Gnuplot.Simple.PlotStyle,
+                                  [(GHC.Types.Double, GHC.Types.Double)])))))) -}
+7a78a5b112552aa21cb42c9ef6cc57fd
+  plotDataPng1 :: [GHC.Types.Double]
+  {- Unfolding: (GHC.Real.numericEnumFromTo
+                   @ GHC.Types.Double
+                   GHC.Classes.$fOrdDouble
+                   GHC.Float.$fFractionalDouble
+                   Main.lossFunc1
+                   Main.plotDataPng2) -}
+807d1c3b99657696ad3443d94d8c2ff0
+  plotDataPng10 :: Graphics.Gnuplot.Simple.PlotStyle
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Graphics.Gnuplot.Simple.PlotStyle
+                   Graphics.Gnuplot.Simple.Points
+                   Graphics.Gnuplot.Simple.defaultStyle1) -}
+a0a7a2cc77976183f2d98ddc216af9cf
+  plotDataPng11 ::
+    (Graphics.Gnuplot.Simple.PlotStyle,
+     [(GHC.Types.Double, GHC.Types.Double)])
+  {- Strictness: m,
+     Unfolding: ((Main.plotDataPng10, Main.plotDataPng12)) -}
+34859f912bcdcf4dcabe30d39cb95768
+  plotDataPng12 :: [(GHC.Types.Double, GHC.Types.Double)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Double, GHC.Types.Double)
+                   Main.plotDataPng16
+                   Main.plotDataPng13) -}
+f7a79982e2e0b1a3acc7122a568c43c8
+  plotDataPng13 :: [(GHC.Types.Double, GHC.Types.Double)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Double, GHC.Types.Double)
+                   Main.plotDataPng14
+                   (GHC.Types.[] @ (GHC.Types.Double, GHC.Types.Double))) -}
+6a09bed1d1777a15d2f55aedc06161da
+  plotDataPng14 :: (GHC.Types.Double, GHC.Types.Double)
+  {- Unfolding: (case GHC.List.$w!!
+                        @ [GHC.Types.Double]
+                        Main.xs
+                        1# of wild {
+                   []
+                   -> case GHC.List.scanl2
+                      ret_ty (GHC.Types.Double, GHC.Types.Double)
+                      of {}
+                   : ds1 xs1
+                   -> case xs1 of wild1 {
+                        [] -> Main.plotDataPng15
+                        : x ds
+                        -> case ds of wild2 {
+                             [] -> Main.plotDataPng15
+                             : y ds2
+                             -> case ds2 of wild3 {
+                                  [] -> (x, y) : ipv ipv1 -> Main.plotDataPng15 } } } }) -}
+4f841d0df742b1ad20e2d3cd214b6bb5
+  plotDataPng15 :: (GHC.Types.Double, GHC.Types.Double)
+  {- Strictness: x -}
+a339f752bb339fe8afb998e12610b9b4
+  plotDataPng16 :: (GHC.Types.Double, GHC.Types.Double)
+  {- Unfolding: (case GHC.List.$w!!
+                        @ [GHC.Types.Double]
+                        Main.xs
+                        0# of wild {
+                   []
+                   -> case GHC.List.scanl2
+                      ret_ty (GHC.Types.Double, GHC.Types.Double)
+                      of {}
+                   : ds1 xs1
+                   -> case xs1 of wild1 {
+                        [] -> Main.plotDataPng15
+                        : x ds
+                        -> case ds of wild2 {
+                             [] -> Main.plotDataPng15
+                             : y ds2
+                             -> case ds2 of wild3 {
+                                  [] -> (x, y) : ipv ipv1 -> Main.plotDataPng15 } } } }) -}
+b8cbc78c471e171e65ac9c1c02d11a1f
+  plotDataPng17 :: [Graphics.Gnuplot.Simple.Attribute]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Gnuplot.Simple.Attribute
+                   Main.plotDataPng36
+                   Main.plotDataPng18) -}
+f7625ad933f3c75fd73ea912dfcdc0a0
+  plotDataPng18 :: [Graphics.Gnuplot.Simple.Attribute]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Gnuplot.Simple.Attribute
+                   Main.plotDataPng33
+                   Main.plotDataPng19) -}
+e2507aebcbe9fdc62f15d95af57b8ab1
+  plotDataPng19 :: [Graphics.Gnuplot.Simple.Attribute]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Gnuplot.Simple.Attribute
+                   Main.plotDataPng32
+                   Main.plotDataPng20) -}
+eaf95c61a256ecb4c3bf70ea66139f15
+  plotDataPng2 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 10.0##) -}
+c3b374b61dcd92d822b9efe78bc21939
+  plotDataPng20 :: [Graphics.Gnuplot.Simple.Attribute]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Gnuplot.Simple.Attribute
+                   Main.plotDataPng29
+                   Main.plotDataPng21) -}
+371d37786a66a7b2f127848c9622c759
+  plotDataPng21 :: [Graphics.Gnuplot.Simple.Attribute]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Gnuplot.Simple.Attribute
+                   Main.plotDataPng26
+                   Main.plotDataPng22) -}
+69fda915aa96b397e3aab8208d674e1a
+  plotDataPng22 :: [Graphics.Gnuplot.Simple.Attribute]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Gnuplot.Simple.Attribute
+                   Main.plotDataPng23
+                   (GHC.Types.[] @ Graphics.Gnuplot.Simple.Attribute)) -}
+7821bab24fc322772ccdaf58c0fe32bf
+  plotDataPng23 :: Graphics.Gnuplot.Simple.Attribute
+  {- Strictness: m3,
+     Unfolding: (Graphics.Gnuplot.Simple.PNG Main.plotDataPng24) -}
+033b88697b854f7c24e6eb987b459cc8
+  plotDataPng24 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.plotDataPng25) -}
+e123a2cf03b6d14e81118126baaaf7c8
+  plotDataPng25 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("simPerceptron.png"#) -}
+c661b8892aad318e4d99ab59217e450c
+  plotDataPng26 :: Graphics.Gnuplot.Simple.Attribute
+  {- Strictness: m14,
+     Unfolding: (Graphics.Gnuplot.Simple.Title Main.plotDataPng27) -}
+0dbe568e63484daca54588044793f7d4
+  plotDataPng27 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.plotDataPng28) -}
+54c51480e7d4724bc2e31680ec6b63f4
+  plotDataPng28 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("simPerceptron"#) -}
+7082d8b4e375d3ef2c664b2c40564dda
+  plotDataPng29 :: Graphics.Gnuplot.Simple.Attribute
+  {- HasNoCafRefs, Strictness: m19,
+     Unfolding: (Graphics.Gnuplot.Simple.YRange Main.plotDataPng30) -}
+8b92c587c28dcb3bfb54ae689b13ebb2
+  plotDataPng3 :: Graphics.Gnuplot.Simple.PlotStyle
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Graphics.Gnuplot.Simple.PlotStyle
+                   Graphics.Gnuplot.Simple.Lines
+                   Graphics.Gnuplot.Simple.defaultStyle1) -}
+521d680d8589868a62648b7c7c90a087
+  plotDataPng30 :: (GHC.Types.Double, GHC.Types.Double)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Main.lossFunc1, Main.plotDataPng31)) -}
+2b417a335464290d0718dce6efb0b253
+  plotDataPng31 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 8.0##) -}
+d5df79626bf23ff7f56b8f83d5efee0b
+  plotDataPng32 :: Graphics.Gnuplot.Simple.Attribute
+  {- HasNoCafRefs, Strictness: m18,
+     Unfolding: (Graphics.Gnuplot.Simple.XRange Main.plotDataPng30) -}
+053488f8cdd36b74d7e8815c3489fb02
+  plotDataPng33 :: Graphics.Gnuplot.Simple.Attribute
+  {- Strictness: m16,
+     Unfolding: (Graphics.Gnuplot.Simple.YLabel Main.plotDataPng34) -}
+d9fa3823c0d84bf9a474f9e254d4c566
+  plotDataPng34 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.plotDataPng35) -}
+80324d601e2cff433b73090cfa94dac5
+  plotDataPng35 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("y"#) -}
+62cc1c57c6c9d24a5ee8e994a4a35536
+  plotDataPng36 :: Graphics.Gnuplot.Simple.Attribute
+  {- Strictness: m15,
+     Unfolding: (Graphics.Gnuplot.Simple.XLabel Main.plotDataPng37) -}
+faab0510bf56c6fa8164af8fd7a198f1
+  plotDataPng37 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.plotDataPng38) -}
+360d55b0b1898c88b6179c642332ec1b
+  plotDataPng38 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("x"#) -}
+7c5dc8bed6d492a3dc416431a343aa7c
+  plotDataPng39 ::
+    [Graphics.Gnuplot.Simple.Attribute]
+    -> [(Graphics.Gnuplot.Simple.PlotStyle,
+         [(GHC.Types.Double, GHC.Types.Double)])]
+    -> GHC.Types.IO ()
+  {- Unfolding: (Graphics.Gnuplot.Simple.plotPathsStyle
+                   @ GHC.Types.Double
+                   Graphics.Gnuplot.Value.Tuple.$fCDouble) -}
+e4af874c5b61dfbffafada26e46bca5b
+  plotDataPng4 ::
+    (Graphics.Gnuplot.Simple.PlotStyle,
+     [(GHC.Types.Double, GHC.Types.Double)])
+  {- Strictness: m,
+     Unfolding: ((Main.plotDataPng10, Main.plotDataPng5)) -}
+8a998c874d83b629c9ac6249da750f84
+  plotDataPng5 :: [(GHC.Types.Double, GHC.Types.Double)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Double, GHC.Types.Double)
+                   Main.plotDataPng9
+                   Main.plotDataPng6) -}
+4bb0e1ae9bf030a91ddcb42efc2848c4
+  plotDataPng6 :: [(GHC.Types.Double, GHC.Types.Double)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Double, GHC.Types.Double)
+                   Main.plotDataPng7
+                   (GHC.Types.[] @ (GHC.Types.Double, GHC.Types.Double))) -}
+0fcf59d5408c48bff6ec9fb66ef67ce8
+  plotDataPng7 :: (GHC.Types.Double, GHC.Types.Double)
+  {- Unfolding: (case GHC.List.$w!!
+                        @ [GHC.Types.Double]
+                        Main.xs
+                        3# of wild {
+                   []
+                   -> case GHC.List.scanl2
+                      ret_ty (GHC.Types.Double, GHC.Types.Double)
+                      of {}
+                   : ds1 xs1
+                   -> case xs1 of wild1 {
+                        [] -> Main.plotDataPng8
+                        : x ds
+                        -> case ds of wild2 {
+                             [] -> Main.plotDataPng8
+                             : y ds2
+                             -> case ds2 of wild3 {
+                                  [] -> (x, y) : ipv ipv1 -> Main.plotDataPng8 } } } }) -}
+e99f8cf90e5f81e5fec33e610e859023
+  plotDataPng8 :: (GHC.Types.Double, GHC.Types.Double)
+  {- Strictness: x -}
+9d52023484a70f8e63f913ac35940c81
+  plotDataPng9 :: (GHC.Types.Double, GHC.Types.Double)
+  {- Unfolding: (case GHC.List.$w!!
+                        @ [GHC.Types.Double]
+                        Main.xs
+                        2# of wild {
+                   []
+                   -> case GHC.List.scanl2
+                      ret_ty (GHC.Types.Double, GHC.Types.Double)
+                      of {}
+                   : ds1 xs1
+                   -> case xs1 of wild1 {
+                        [] -> Main.plotDataPng8
+                        : x ds
+                        -> case ds of wild2 {
+                             [] -> Main.plotDataPng8
+                             : y ds2
+                             -> case ds2 of wild3 {
+                                  [] -> (x, y) : ipv ipv1 -> Main.plotDataPng8 } } } }) -}
+9ef5b2596e2430bcdd82349c93163411
+  simPerceptron ::
+    System.Random.StdGen
+    -> Internal.Matrix.Matrix Internal.Vector.R
+    -> GHC.Types.Int
+    -> GHC.Types.IO ()
+  {- Arity: 4, Strictness: <L,U><L,1*U(U,U,U,U,U,U,U)><L,U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main6
+                  `cast`
+                (<System.Random.StdGen>_R
+                 ->_R <Internal.Matrix.Matrix Internal.Vector.R>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+c09f0a993f7afcf7b6a223ffe23d7ee8
+  ts :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Main.gradientDescent31
+                   Main.gradientDescent27) -}
+2d36e767290b44543cc3b45e393b6964
+  xs :: [[GHC.Types.Double]]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Double]
+                   Main.gradientDescent22
+                   Main.gradientDescent5) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

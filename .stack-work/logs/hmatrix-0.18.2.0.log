@@ -1,0 +1,127 @@
+Configuring hmatrix-0.18.2.0...
+Preprocessing library for hmatrix-0.18.2.0..
+Building library for hmatrix-0.18.2.0..
+[ 1 of 27] Compiling Internal.Vector  ( src/Internal/Vector.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Vector.o )
+[ 2 of 27] Compiling Internal.Devel   ( src/Internal/Devel.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Devel.o )
+[ 3 of 27] Compiling Internal.Vectorized ( src/Internal/Vectorized.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Vectorized.o )
+[ 4 of 27] Compiling Internal.Matrix  ( src/Internal/Matrix.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Matrix.o )
+[ 5 of 27] Compiling Internal.ST      ( src/Internal/ST.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/ST.o )
+[ 6 of 27] Compiling Internal.IO      ( src/Internal/IO.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/IO.o )
+[ 7 of 27] Compiling Internal.Element ( src/Internal/Element.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Element.o )
+[ 8 of 27] Compiling Internal.Conversion ( src/Internal/Conversion.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Conversion.o )
+[ 9 of 27] Compiling Internal.LAPACK  ( src/Internal/LAPACK.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/LAPACK.o )
+[10 of 27] Compiling Internal.Numeric ( src/Internal/Numeric.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Numeric.o )
+[11 of 27] Compiling Internal.Sparse  ( src/Internal/Sparse.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Sparse.o )
+[12 of 27] Compiling Internal.Chain   ( src/Internal/Chain.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Chain.o )
+[13 of 27] Compiling Internal.Algorithms ( src/Internal/Algorithms.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Algorithms.o )
+[14 of 27] Compiling Internal.Random  ( src/Internal/Random.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Random.o )
+[15 of 27] Compiling Internal.Container ( src/Internal/Container.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Container.o )
+
+[;1msrc/Internal/Container.hs:185:10: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘Container Matrix e’
+        matches an instance declaration
+      instance (Num a, Element a, Container Vector a) =>
+               Container Matrix a
+        -- Defined at src/Internal/Numeric.hs:324:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the context: Container Matrix e
+      While checking an instance declaration
+      In the instance declaration for
+        ‘Build (Int, Int) (e -> e -> e) Matrix e’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m185 |[0m[0m instance [;1m[35mContainer Matrix e => Build (Int,Int) (e -> e -> e) Matrix e[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[16 of 27] Compiling Internal.Convolution ( src/Internal/Convolution.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Convolution.o )
+[17 of 27] Compiling Numeric.LinearAlgebra.Devel ( src/Numeric/LinearAlgebra/Devel.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Numeric/LinearAlgebra/Devel.o )
+[18 of 27] Compiling Numeric.Matrix   ( src/Numeric/Matrix.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Numeric/Matrix.o )
+[19 of 27] Compiling Numeric.Vector   ( src/Numeric/Vector.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Numeric/Vector.o )
+[20 of 27] Compiling Internal.Util    ( src/Internal/Util.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Util.o )
+[21 of 27] Compiling Internal.Modular ( src/Internal/Modular.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Modular.o )
+
+[;1msrc/Internal/Modular.hs:135:10: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wmissing-methods[0m[0m[;1m][0m[0m[;1m
+    • No explicit implementation for
+        ‘reorderV’
+    • In the instance declaration for ‘Element (Mod m I)’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m135 |[0m[0m instance [;1m[35mKnownNat m => Element (Mod m I)[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Internal/Modular.hs:152:10: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wmissing-methods[0m[0m[;1m][0m[0m[;1m
+    • No explicit implementation for
+        ‘reorderV’
+    • In the instance declaration for ‘Element (Mod m Z)’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m152 |[0m[0m instance [;1m[35mKnownNat m => Element (Mod m Z)[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[22 of 27] Compiling Numeric.LinearAlgebra.Data ( src/Numeric/LinearAlgebra/Data.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Numeric/LinearAlgebra/Data.o )
+[23 of 27] Compiling Internal.CG      ( src/Internal/CG.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/CG.o )
+[24 of 27] Compiling Numeric.LinearAlgebra ( src/Numeric/LinearAlgebra.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Numeric/LinearAlgebra.o )
+[25 of 27] Compiling Numeric.LinearAlgebra.HMatrix ( src/Numeric/LinearAlgebra/HMatrix.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Numeric/LinearAlgebra/HMatrix.o )
+[26 of 27] Compiling Internal.Static  ( src/Internal/Static.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Internal/Static.o )
+
+[;1msrc/Internal/Static.hs:367:10: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘Num (Matrix t)’ matches an instance declaration
+      instance (Container Matrix a, Num a, Num (Vector a)) =>
+               Num (Matrix a)
+        -- Defined at src/Numeric/Matrix.hs:45:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the context: (Num (Vector t), Num (Matrix t), Fractional t,
+                       Numeric t)
+      While checking an instance declaration
+      In the instance declaration for ‘Fractional (Dim n (Vector t))’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m367 |[0m[0m instance [;1m[35m(Num (Vector t), Num (Matrix t), Fractional t, Numeric t) => Fractional (Dim n (Vector t))[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Internal/Static.hs:392:10: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘Num (Matrix t)’ matches an instance declaration
+      instance (Container Matrix a, Num a, Num (Vector a)) =>
+               Num (Matrix a)
+        -- Defined at src/Numeric/Matrix.hs:45:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the context: (Num (Matrix t), Numeric t)
+      While checking an instance declaration
+      In the instance declaration for ‘Num (Dim m (Dim n (Matrix t)))’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m392 |[0m[0m instance [;1m[35m(Num (Matrix t), Numeric t) => Num (Dim m (Dim n (Matrix t)))[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Internal/Static.hs:402:10: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘Num (Matrix t)’ matches an instance declaration
+      instance (Container Matrix a, Num a, Num (Vector a)) =>
+               Num (Matrix a)
+        -- Defined at src/Numeric/Matrix.hs:45:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the context: (Num (Vector t), Num (Matrix t), Fractional t,
+                       Numeric t)
+      While checking an instance declaration
+      In the instance declaration for
+        ‘Fractional (Dim m (Dim n (Matrix t)))’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m402 |[0m[0m instance [;1m[35m(Num (Vector t), Num (Matrix t), Fractional t, Numeric t) => Fractional (Dim m (Dim n (Matrix t)))[0m[0m
+[;1m[34m    |[0m[0m[;1m[35m          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Internal/Static.hs:407:10: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wsimplifiable-class-constraints[0m[0m[;1m][0m[0m[;1m
+    • The constraint ‘Floating (Matrix t)’
+        matches an instance declaration
+      instance (Floating a, Container Vector a, Floating (Vector a),
+                Fractional (Matrix a)) =>
+               Floating (Matrix a)
+        -- Defined at src/Numeric/Matrix.hs:62:10
+      This makes type inference for inner bindings fragile;
+        either use MonoLocalBinds, or simplify it using the instance
+    • In the context: (Num (Vector t), Floating (Matrix t),
+                       Fractional t, Numeric t)
+      While checking an instance declaration
+      In the instance declaration for
+        ‘Floating (Dim m (Dim n (Matrix t)))’[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m407 |[0m[0m instance [;1m[35m(Num (Vector t), Floating (Matrix t), Fractional t, Numeric t) => Floating (Dim m (Dim n (Matrix t)))[0m[0m where
+[;1m[34m    |[0m[0m[;1m[35m          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[27 of 27] Compiling Numeric.LinearAlgebra.Static ( src/Numeric/LinearAlgebra/Static.hs, .stack-work/dist/x86_64-linux/Cabal-2.0.1.0/build/Numeric/LinearAlgebra/Static.o )
+Installing library in /home/users/kida/.stack/snapshots/x86_64-linux/lts-11.6/8.2.2/lib/x86_64-linux-ghc-8.2.2/hmatrix-0.18.2.0-4JzegafAf9N86CBbGNstOS
+Registering library for hmatrix-0.18.2.0..
